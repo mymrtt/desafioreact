@@ -1,20 +1,13 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class List extends Component{
   render(){
     return(
       <ul className="list"> 
-        <li>Adriana da Silva</li>
-        <li>Breno das Flores</li>
-        <li>Carlos Eduardo de Souza</li>
-        <li>Juliana Cadidé</li>
-        <li>Maria Alice Ribeiro</li>
-        <li>Maria Cicera Madalena</li>
-        <li>Neide Maria Ribeiro</li>
-        <li>Osvaldo dos Santos</li>
-        <li>Ygo Ribeiro</li>
-        <li>Valdir Papel</li>
-        <li>Zilma de Oliveira</li>
+        {this.props.pessoas.map((item) => {
+          return <li><Link to={'/${item.id}'} key={item.id}>{item.nome}</Link></li>;
+        })}
       </ul>
     );
   }
