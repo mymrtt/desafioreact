@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import './App.css';
-import Cadastro from './Cadastro';
+import './style.css';
+import AppShell from './AppShell';
 
   export default class App extends React.Component {
   render(){
     return (
-      <Cadastro />
+      <AppShell />
     );
   }
 }
