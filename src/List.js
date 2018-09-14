@@ -6,7 +6,7 @@ export default class List extends Component{
     return(
       <ul className="list"> 
         {this.props.pessoas.map((item) => {
-          return <li><Link to={'/${item.id}'} key={item.id}>{item.nome}</Link></li>;
+          return <li><Link to={`/${item.id}`} key={item.id}>{item.nome}</Link></li>;
         })}
       </ul>
     );
